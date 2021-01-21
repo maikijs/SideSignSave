@@ -1,0 +1,11 @@
+name: SideSignSave
+version: ${project.version}
+main: lv.side.Main
+authors: [Sapnis, Zurius]
+description: Save sign shop to config file
+commands:
+  SignSave:
+    aliases:
+      - signs
+      - sign
+    description: Main plugin command

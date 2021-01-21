@@ -1,0 +1,15 @@
+Prices:
+  Sell:
+    64:
+      Obsidian: 10
+      dirt: 1
+      grass: 10
+    2304:
+      Obsidian: 500
+  Buy:
+    1:
+      Obsidian: 2
+    32:
+      Obsidian: 5
+    64:
+      Obsidian: 10
