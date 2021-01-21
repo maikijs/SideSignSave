@@ -1,5 +1,5 @@
-name: SideSignSave
-version: ${project.version}
+name: SignSave
+version: 1.0
 main: lv.side.Main
 authors: [Sapnis, Zurius]
 description: Save sign shop to config file

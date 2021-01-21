@@ -82,29 +82,11 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage(color("&6[!] &eSigns updated successfully."));
                     return true;
                 }
-                if (args[0].equalsIgnoreCase("addsign")) {
-                    if (player.getTargetBlock((Set) null, 5).getState() instanceof Sign) {
-                        Main.updateSigns();
-                        Sign zime = (Sign) player.getTargetBlock((Set) null, 5).getState();
-
-                        if (zime.getLine(0).contains("§1[Buy]")) {
-                            Main.buySignList.addSign(zime.getLines(), zime.getBlock());
-                        }
-                        if (zime.getLine(0).contains("§1[Sell]")) {
-                            Main.sellSignList.addSign(zime.getLines(), zime.getBlock());
-                        }
-                        return false;
-                    }
-                    sender.sendMessage(color("&4[!] &cSign not found! Look at the sign."));
-                    return false;
-                }
-
             } else {
-                sender.sendMessage(color("&6SignSave &7Commands"));
-                sender.sendMessage(color("&e/sign <Buy/Sell/Spawner/> <Amount> <Item/Mob>"));
-                sender.sendMessage(color("&e/sign <nobuy/nosell> &8- &fSet no buy or no sell sign."));
-                sender.sendMessage(color("&e/sign reload &8- &fReloads the plugin."));
-                sender.sendMessage(color("&e/sign addsign &8- &fidk what this does."));
+                sender.sendMessage(color("&6&lSignSave &7Commands"));
+                sender.sendMessage(color("&8* &e/sign <Buy/Sell/Spawner> <Amount> <Item/Mob>"));
+                sender.sendMessage(color("&8* &e/sign <nobuy/nosell> &8- &fSet no buy or no sell sign."));
+                sender.sendMessage(color("&8* &e/sign reload &8- &fReloads the plugin."));
                 return true;
             }
             return false;

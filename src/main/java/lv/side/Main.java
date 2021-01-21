@@ -22,7 +22,7 @@ public final class Main extends JavaPlugin {
         instance = this;
         getLogger().info("Starting!");
 
-        getCommand("createSign").setExecutor(new MainCommand(this));
+        getCommand("SignSave").setExecutor(new MainCommand(this));
         getServer().getPluginManager().registerEvents(new SignChangeListener(), this);
 
         sellSignList = new SignUtils("sellSigns");
