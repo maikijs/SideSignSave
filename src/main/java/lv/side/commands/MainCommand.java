@@ -86,6 +86,7 @@ public class MainCommand implements CommandExecutor {
                 sender.sendMessage(color("&6&lSignSave &7Commands"));
                 sender.sendMessage(color("&8* &e/sign <Buy/Sell/Spawner> <Amount> <Item/Mob>"));
                 sender.sendMessage(color("&8* &e/sign <nobuy/nosell> &8- &fSet no buy or no sell sign."));
+                sender.sendMessage(color("&8* &e/sign update &8- &fUpdates signs from the config."));
                 sender.sendMessage(color("&8* &e/sign reload &8- &fReloads the plugin."));
                 return true;
             }
