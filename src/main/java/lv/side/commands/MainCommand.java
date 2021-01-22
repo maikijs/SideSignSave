@@ -28,7 +28,7 @@ public class MainCommand implements CommandExecutor {
                 sender.sendMessage("You don't have permission");
                 return false;
             }
-            if (args.length > 1) {
+            if (args.length >= 1) {
                 if (args[0].equals("Buy") || args[0].equals("Sell") || args[0].equals("Spawner")) {
                     if (player.getTargetBlock((Set) null, 5).getState() instanceof Sign) {
                         if (args[1] != null && args[2] != null) {
@@ -71,12 +71,8 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage(color("&6[!] &eNot available for sale sign set."));
                     return true;
                 }
-                if (args[0].equalsIgnoreCase("reload")) {
-                    plugin.reloadConfig();
-                    sender.sendMessage(color("&6[!] &ePlugin reloaded successfully."));
-                    return true;
-                }
                 if (args[0].equalsIgnoreCase("update")) {
+                    plugin.reloadConfig();
                     Main.readSigns();
                     Main.updateSigns();
                     sender.sendMessage(color("&6[!] &eSigns updated successfully."));
@@ -87,7 +83,6 @@ public class MainCommand implements CommandExecutor {
                 sender.sendMessage(color("&8* &e/sign <Buy/Sell/Spawner> <Amount> <Item/Mob>"));
                 sender.sendMessage(color("&8* &e/sign <nobuy/nosell> &8- &fSet no buy or no sell sign."));
                 sender.sendMessage(color("&8* &e/sign update &8- &fUpdates signs from the config."));
-                sender.sendMessage(color("&8* &e/sign reload &8- &fReloads the plugin."));
                 return true;
             }
             return false;
